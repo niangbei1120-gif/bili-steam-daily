@@ -1,0 +1,35 @@
+name: B站 Steam 热点日报
+
+on:
+  schedule:
+    # 每天北京时间 10:00（UTC 2:00）
+    - cron: "0 2 * * *"
+  workflow_dispatch:   # 允许手动触发
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 写入 B站 Cookie 到文件
+        run: |
+          echo "${{ secrets.BILI_COOKIE }}" > bili_cookie.txt
+
+      - name: 运行脚本
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: python b站游戏热点推送.py
