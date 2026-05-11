@@ -10,6 +10,10 @@ jobs:
   run:
     runs-on: ubuntu-latest
 
+    # 需要写权限才能推送到 gh-pages 分支
+    permissions:
+      contents: write
+
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -28,8 +32,17 @@ jobs:
         run: |
           echo "${{ secrets.BILI_COOKIE }}" > bili_cookie.txt
 
-      - name: 运行脚本
+      - name: 运行脚本（生成日报 + 推送飞书）
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: python b站游戏热点推送.py
+
+      - name: 部署 HTML 日报到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./report       # 脚本输出到这个目录
+          destination_dir: report     # 部署到 gh-pages 的 /report/ 子目录
+          keep_files: true            # 保留历史日报，不覆盖旧文件
