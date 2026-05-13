@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏圈情报日报 · 2026-05-13</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 24px 16px 48px;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* Header */
+  .header { margin-bottom: 24px; }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; flex-shrink: 0; }
+  .title { font-size: 20px; font-weight: 600; color: #0f172a; }
+  .subtitle { font-size: 13px; color: #64748b; margin-left: 18px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  .stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+  .stat-label { font-size: 12px; color: #94a3b8; margin-bottom: 4px; }
+  .stat-num { font-size: 22px; font-weight: 600; color: #0f172a; }
+
+  /* Sections */
+  .sections { display: flex; flex-direction: column; gap: 16px; }
+  .section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+  .section-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .section-emoji { font-size: 15px; }
+  .section-name { font-size: 14px; font-weight: 600; flex: 1; }
+  .section-count {
+    font-size: 11px; color: #94a3b8;
+    background: #f1f5f9; padding: 2px 8px;
+    border-radius: 20px;
+  }
+  .section-body { padding: 4px 0; }
+
+  /* Items */
+  .item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .item:last-child { border-bottom: none; }
+  .item-body { flex: 1; min-width: 0; }
+  .item-top {
+    display: flex; align-items: center; gap: 6px;
+    flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .source {
+    font-size: 11px; font-weight: 500;
+    background: #eff6ff; color: #2563eb;
+    padding: 1px 6px; border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .game { font-size: 14px; font-weight: 600; color: #0f172a; }
+  .tag {
+    font-size: 11px; color: #475569;
+    background: #f1f5f9; border: 1px solid #e2e8f0;
+    padding: 1px 7px; border-radius: 4px;
+    font-family: monospace;
+  }
+  .desc { font-size: 13px; color: #475569; line-height: 1.55; }
+  .link-arrow {
+    font-size: 16px; color: #94a3b8;
+    text-decoration: none; flex-shrink: 0;
+    margin-top: 2px; transition: color 0.15s;
+  }
+  .link-arrow:hover { color: #3b82f6; }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px; text-align: center;
+    font-size: 12px; color: #94a3b8;
+  }
+
+  @media (max-width: 480px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .title { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="dot"></div>
+      <span class="title">游戏圈情报日报</span>
+    </div>
+    <div class="subtitle">2026-05-13 · 自动抓取 B站 + 6 路 RSS · DeepSeek AI 分类</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">精选条目</div>
+      <div class="stat-num">12</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">内容板块</div>
+      <div class="stat-num">4</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">来源平台</div>
+      <div class="stat-num">7</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">推送时间</div>
+      <div class="stat-num" style="font-size:16px">09:00</div>
+    </div>
+  </div>
+
+  <div class="sections">
+    
+      <div class="section">
+        <div class="section-head" style="background:#dbeafe">
+          <span class="section-emoji">🆕</span>
+          <span class="section-name" style="color:#1e40af">新游速报</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">《烈焰之刃》</span>
+              <span class="tag">版本更新</span>
+            </div>
+            <p class="desc">2.0版本更新将于5月14日登陆PC，新增钛金难度与新游戏+模式。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1GX556NEPL" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">《黑相集：8020指令》</span>
+              <span class="tag">正式发售</span>
+            </div>
+            <p class="desc">科幻恐怖游戏《8020号指令》现已登陆Steam等平台。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/214386" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">《极限竞速：地平线6》</span>
+              <span class="tag">发售日期</span>
+            </div>
+            <p class="desc">游戏将于5月19日首发加入XGP，尊享版5月15日提前畅玩。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1HP5C68Ekk" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#fee2e2">
+          <span class="section-emoji">🔥</span>
+          <span class="section-name" style="color:#991b1b">玩家热梗/话题</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">《红色沙漠》</span>
+              <span class="tag">玩家争议</span>
+            </div>
+            <p class="desc">游戏因更新为角色“偷加布料”引发玩家不满，官方回应称是BUG。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1N6516CECx" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">《极限竞速：地平线6》</span>
+              <span class="tag">封号事件</span>
+            </div>
+            <p class="desc">因游戏偷跑，微软对违规玩家处以长达9999年的封禁，引发热议。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1n3516YEnz" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">《深海迷航 2》</span>
+              <span class="tag">玩家致敬</span>
+            </div>
+            <p class="desc">一款外国游戏评论区出现大量致敬中国玩家的内容，引发社区讨论。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1ij5C6HEYT" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#dcfce7">
+          <span class="section-emoji">📢</span>
+          <span class="section-name" style="color:#166534">平台/营销活动</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">Steam平台</span>
+              <span class="tag">史低促销</span>
+            </div>
+            <p class="desc">《鬼泣5》新史低22.2元，《荒野大镖客2》史低69.75元等多款游戏折扣中。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1JX516vEWf" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">《战地风云6》</span>
+              <span class="tag">Twitch掉宝</span>
+            </div>
+            <p class="desc">观看指定Twitch直播可获取《战地风云6》第3赛季游戏内物品。</p>
+          </div>
+          <a href="https://keylol.com/t1037682-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">《刺客信条：黑旗 记忆重置》</span>
+              <span class="tag">寻宝活动</span>
+            </div>
+            <p class="desc">育碧携手寻宝专家推出50万美元终极宝藏的硬核寻宝活动。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/214396" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#f1f5f9">
+          <span class="section-emoji">📰</span>
+          <span class="section-name" style="color:#334155">圈内大事</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">Capcom</span>
+              <span class="tag">财报数据</span>
+            </div>
+            <p class="desc">Capcom最新财报显示，《生化危机》系列全球累计销量已突破2.01亿份。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/214401" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">名越稔洋工作室</span>
+              <span class="tag">运营危机</span>
+            </div>
+            <p class="desc">名越稔洋工作室官网停止运营，其新作《龙帮》面临重大危机。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/214395" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">Mercury Steam工作室</span>
+              <span class="tag">裁员</span>
+            </div>
+            <p class="desc">曾开发《烈焰之刃》的Mercury Steam工作室宣布将进行裁员。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/214384" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer">
+    每天 09:00 自动推送 · 由 GitHub Actions 生成 · 飞书机器人
+  </div>
+
+</div>
+</body>
+</html>
