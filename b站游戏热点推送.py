@@ -216,17 +216,18 @@ def classify_via_deepseek(videos):
 列表中的每个内容都有一个唯一的编号（id字段），以及其来源平台（source字段）。
 
 **要求：**
-1.  **严苛筛选**：只保留与 PC / Steam 游戏直接相关的内容，**果断丢弃**：纯手游、主机独占游戏、线下活动、与游戏无关的财经/社会新闻、泛科技新闻。
+1.  **严苛筛选**：只保留与 PC / Steam 游戏直接相关的内容，**果断丢弃**：纯手游、主机独占游戏、线下活动、与游戏无关的财经/社会新闻、泛科技新闻。同一款游戏的同一事件只保留描述最完整的一条，禁止重复入选。
 2.  **来源均衡**：所有平台（B站、机核、游民星空、3DM、其乐Keylol、indienova、游戏葡萄）地位平等，不能只选B站。尽量从多个来源选取最优质的内容，避免单一平台垄断。
-3.  **精准分类**：将所有符合条件的内容归入以下四类，每类最多保留3条，总共不超过12条。
-    *   **新游速报**：Steam新游上线、测试、公布发售日、重大版本更新。
-    *   **玩家热梗/话题**：在玩家社群中正在快速传播的热门事件、段子、争议、出圈话题、名场面。
-    *   **平台/营销活动**：包括 Steam 游戏节/新品节、Epic游戏商城特卖/喜加一、各厂商的独立游戏发布会、大型促销活动等。
-    *   **圈内大事**：对游戏行业有影响的产业新闻、发行商重大决策、核心玩家社区事件。
-4.  **输出格式**：
+3.  **特别过滤**：其乐Keylol 来源中，纯打折促销、史低特卖、喜加一领取类内容一律丢弃，只保留有实质内容的讨论帖或新闻。
+4.  **精准分类**：将所有符合条件的内容归入以下四类，按顺序输出，优先级依次降低。
+    *   **新游速报**：Steam新游上线、测试、公布发售日、重大版本更新。最多3条。
+    *   **热度飙升**：在玩家社群中正在快速传播的热门事件、出圈话题、争议、名场面、热梗。最多3条。
+    *   **圈内大事**：对游戏行业有影响的产业新闻、发行商重大决策、核心玩家社区事件。最多3条。
+    *   **平台活动**：Steam游戏节/新品节、Epic喜加一、大型促销活动（非史低打折类）。最多2条，放在最后。
+5.  **输出格式**：
     *   输出一个 JSON 数组，每个元素代表一个分类，格式如下：
     *   `[{{"category": "新游速报", "items": [{{"game": "游戏名", "tag": "状态标签", "desc": "一句话描述", "id": 对应编号}}, ...]}}]`
-    *   category 只能从上述四个分类名中选取，items 中每条必须包含 game、tag、desc、id 四个字段。
+    *   category 只能从上述四个分类名（新游速报、热度飙升、圈内大事、平台活动）中选取，items 中每条必须包含 game、tag、desc、id 四个字段。
     *   只输出 JSON，不要任何额外文字或 Markdown 代码块包裹。
 
 今天是{datetime.now().strftime('%Y-%m-%d')}。
@@ -281,11 +282,11 @@ def generate_html_report(categorized, video_map, date_str):
     """生成美化版 HTML 日报，保存到 report/{date_str}.html"""
 
     section_cfg = {
-        "新游速报":     {"emoji": "🆕", "hbg": "#dbeafe", "hcolor": "#1e40af"},
-        "玩家热梗/话题": {"emoji": "🔥", "hbg": "#fee2e2", "hcolor": "#991b1b"},
-        "平台/营销活动": {"emoji": "📢", "hbg": "#dcfce7", "hcolor": "#166534"},
-        "圈内大事":     {"emoji": "📰", "hbg": "#f1f5f9", "hcolor": "#334155"},
-        "今日游戏热点":  {"emoji": "🎮", "hbg": "#ede9fe", "hcolor": "#4c1d95"},
+        "新游速报":  {"emoji": "🆕", "hbg": "#dbeafe", "hcolor": "#1e40af"},
+        "热度飙升":  {"emoji": "🔥", "hbg": "#fee2e2", "hcolor": "#991b1b"},
+        "圈内大事":  {"emoji": "📰", "hbg": "#f1f5f9", "hcolor": "#334155"},
+        "平台活动":  {"emoji": "📢", "hbg": "#dcfce7", "hcolor": "#166534"},
+        "今日游戏热点": {"emoji": "🎮", "hbg": "#ede9fe", "hcolor": "#4c1d95"},
     }
 
     # 兼容两种格式
@@ -510,11 +511,11 @@ def build_feishu_card(categorized, video_map, report_url=""):
     elements = []
 
     emoji_map = {
-        "新游速报":     "🆕",
-        "玩家热梗/话题": "🔥",
-        "平台/营销活动": "📢",
-        "圈内大事":     "📰",
-        "今日游戏热点":  "🎮",
+        "新游速报":    "🆕",
+        "热度飙升":    "🔥",
+        "圈内大事":    "📰",
+        "平台活动":    "📢",
+        "今日游戏热点": "🎮",
     }
 
     # 兼容两种数据格式
@@ -650,6 +651,15 @@ def send_feishu(card):
     except Exception as e:
         print(f"❌ 飞书发送异常：{e}")
 
+def send_feishu_alert(text):
+    """发送纯文本警报到飞书"""
+    try:
+        r = requests.post(FEISHU_WEBHOOK, json={"msg_type": "text", "content": {"text": text}}, timeout=15)
+        if r.status_code == 200:
+            print(f"✅ 飞书警报已发送：{text}")
+    except Exception as e:
+        print(f"❌ 飞书警报发送失败：{e}")
+
 # ==================== 主流程 ====================
 
 def main():
@@ -659,6 +669,8 @@ def main():
     print("📡 正在抓取 B站 Steam 相关视频…")
     videos = fetch_recent_videos(max_pages=3)
     print(f"📺 B站视频: {len(videos)} 条")
+    if not videos:
+        send_feishu_alert("⚠️ B站 Cookie 可能已过期，今日视频抓取 0 条，请前往仓库 Settings → Secrets 更新 BILI_COOKIE")
 
     rss_items = fetch_rss_news()
 
