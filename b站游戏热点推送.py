@@ -570,7 +570,7 @@ def build_feishu_card(categorized, video_map, report_url=""):
         elements.append({"tag": "hr"})
 
     # 底部脚注
-    footer_text = "每天 09:00 自动推送 · 飞书机器人"
+    footer_text = "每日自动推送 · 飞书机器人"
     if report_url:
         footer_text += f"　　[📄 查看完整日报]({report_url})"
     elements.append({
