@@ -2,8 +2,8 @@ name: B站 Steam 热点日报
 
 on:
   schedule:
-    # 每天北京时间 10:00（UTC 2:00）
-    - cron: "0 2 * * *"
+   # 每天北京时间约 08:00~10:00（UTC 0:00，预留积压缓冲）
+  - cron: "0 0 * * *"
   workflow_dispatch:   # 允许手动触发
 
 jobs:
