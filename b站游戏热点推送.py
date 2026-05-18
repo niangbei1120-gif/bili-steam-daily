@@ -645,9 +645,14 @@ def send_feishu(card):
     try:
         r = requests.post(FEISHU_WEBHOOK, json=card, timeout=15)
         if r.status_code == 200:
-            print("✅ 飞书推送成功")
+            result = r.json()
+            print(f"飞书响应：{result}")
+            if result.get("code") == 0:
+                print("✅ 飞书推送成功")
+            else:
+                print(f"❌ 飞书推送失败：{result.get('msg')}")
         else:
-            print(f"❌ 飞书推送失败：{r.status_code} {r.text}")
+            print(f"❌ HTTP错误：{r.status_code}")
     except Exception as e:
         print(f"❌ 飞书发送异常：{e}")
 
