@@ -37,6 +37,10 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_ADMIN_WEBHOOK: ${{ secrets.FEISHU_ADMIN_WEBHOOK }}
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: python b站游戏热点推送.py
 
       - name: 部署 HTML 日报到 GitHub Pages
