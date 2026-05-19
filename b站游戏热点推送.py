@@ -19,6 +19,7 @@ from datetime import datetime
 
 import requests
 import feedparser
+from bili_cookie_refresh import refresh_cookie
 
 # ==================== 配置区 ====================
 
@@ -50,6 +51,21 @@ HEADERS = {
     "Cookie": BILI_COOKIE,
 }
 TIMEOUT = 15
+
+# ==================== Cookie 校验 ====================
+
+def is_cookie_valid(cookie: str) -> bool:
+    """用 B站 nav 接口静默校验 cookie 是否有效"""
+    try:
+        resp = requests.get(
+            "https://api.bilibili.com/x/web-interface/nav",
+            headers={**HEADERS, "Cookie": cookie},
+            timeout=8,
+        )
+        data = resp.json()
+        return data.get("code") == 0 and data.get("data", {}).get("isLogin", False)
+    except Exception:
+        return False
 
 # ==================== WBI 签名 ====================
 
@@ -668,14 +684,25 @@ def send_feishu_alert(text):
 # ==================== 主流程 ====================
 
 def main():
+    global BILI_COOKIE, HEADERS
+
     date_str = datetime.now().strftime("%Y-%m-%d")
+
+    # 0. 静默校验 Cookie，过期则推二维码给管理员刷新
+    if not is_cookie_valid(BILI_COOKIE):
+        print("🔄 Cookie 失效，启动静默刷新流程...")
+        new_cookie = refresh_cookie()
+        if new_cookie is None:
+            print("❌ Cookie 刷新失败，今日跳过推送")
+            return
+        BILI_COOKIE = new_cookie
+        HEADERS["Cookie"] = new_cookie
+        print("✅ Cookie 已刷新，继续执行")
 
     # 1. 抓取多路数据源
     print("📡 正在抓取 B站 Steam 相关视频…")
     videos = fetch_recent_videos(max_pages=3)
     print(f"📺 B站视频: {len(videos)} 条")
-    if not videos:
-        send_feishu_alert("⚠️ B站 Cookie 可能已过期，今日视频抓取 0 条，请前往仓库 Settings → Secrets 更新 BILI_COOKIE")
 
     rss_items = fetch_rss_news()
 
