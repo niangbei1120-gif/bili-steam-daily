@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏圈情报日报 · 2026-06-29</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 24px 16px 48px;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* Header */
+  .header { margin-bottom: 24px; }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; flex-shrink: 0; }
+  .title { font-size: 20px; font-weight: 600; color: #0f172a; }
+  .subtitle { font-size: 13px; color: #64748b; margin-left: 18px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  .stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+  .stat-label { font-size: 12px; color: #94a3b8; margin-bottom: 4px; }
+  .stat-num { font-size: 22px; font-weight: 600; color: #0f172a; }
+
+  /* Sections */
+  .sections { display: flex; flex-direction: column; gap: 16px; }
+  .section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+  .section-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .section-emoji { font-size: 15px; }
+  .section-name { font-size: 14px; font-weight: 600; flex: 1; }
+  .section-count {
+    font-size: 11px; color: #94a3b8;
+    background: #f1f5f9; padding: 2px 8px;
+    border-radius: 20px;
+  }
+  .section-body { padding: 4px 0; }
+
+  /* Items */
+  .item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .item:last-child { border-bottom: none; }
+  .item-body { flex: 1; min-width: 0; }
+  .item-top {
+    display: flex; align-items: center; gap: 6px;
+    flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .source {
+    font-size: 11px; font-weight: 500;
+    background: #eff6ff; color: #2563eb;
+    padding: 1px 6px; border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .game { font-size: 14px; font-weight: 600; color: #0f172a; }
+  .tag {
+    font-size: 11px; color: #475569;
+    background: #f1f5f9; border: 1px solid #e2e8f0;
+    padding: 1px 7px; border-radius: 4px;
+    font-family: monospace;
+  }
+  .desc { font-size: 13px; color: #475569; line-height: 1.55; }
+  .link-arrow {
+    font-size: 16px; color: #94a3b8;
+    text-decoration: none; flex-shrink: 0;
+    margin-top: 2px; transition: color 0.15s;
+  }
+  .link-arrow:hover { color: #3b82f6; }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px; text-align: center;
+    font-size: 12px; color: #94a3b8;
+  }
+
+  @media (max-width: 480px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .title { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="dot"></div>
+      <span class="title">游戏圈情报日报</span>
+    </div>
+    <div class="subtitle">2026-06-29 · 自动抓取 B站 + 6 路 RSS · DeepSeek AI 分类</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">精选条目</div>
+      <div class="stat-num">10</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">内容板块</div>
+      <div class="stat-num">4</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">来源平台</div>
+      <div class="stat-num">7</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">推送时间</div>
+      <div class="stat-num" style="font-size:16px">09:00</div>
+    </div>
+  </div>
+
+  <div class="sections">
+    
+      <div class="section">
+        <div class="section-head" style="background:#dbeafe">
+          <span class="section-emoji">🆕</span>
+          <span class="section-name" style="color:#1e40af">新游速报</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">幻兽帕鲁</span>
+              <span class="tag">重大版本更新</span>
+            </div>
+            <p class="desc">《幻兽帕鲁》1.0正式版将于7月10日上线，带来全新连续任务、广阔新区域及帕洛斯群岛的焕新变化。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1ob7L6JEXG" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">VR战士：命运交锋</span>
+              <span class="tag">新作预告</span>
+            </div>
+            <p class="desc">世嘉公布《VR战士：命运交锋》（虚幻斗士 命运交锋）新角色「巴克纳瓦杀手」实机预告，游戏将于2027年发售。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1DqTL6mEgf" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">DarkSwarm</span>
+              <span class="tag">即将试玩</span>
+            </div>
+            <p class="desc">4人合作俯视角战术射击新游《DarkSwarm》（黑暗虫群）即将开启抢先试玩。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV18fT56yEQg" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#fee2e2">
+          <span class="section-emoji">🔥</span>
+          <span class="section-name" style="color:#991b1b">热度飙升</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">潜水员戴夫</span>
+              <span class="tag">DLC争议</span>
+            </div>
+            <p class="desc">《潜水员戴夫》新DLC「深入丛林」好评率仅74%，简中好评率不足60%，因玩法繁杂导致核心捕鱼开店循环体验减弱引发玩家讨论。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1XYTL6nEM7" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">Steam Machine</span>
+              <span class="tag">价格争议</span>
+            </div>
+            <p class="desc">Valve官方公布Steam Machine售价（1049美元起），因价格远超玩家预期引发社群热议和回旋镖讨论。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV13QTG6rEs8" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">FEAR FA 98</span>
+              <span class="tag">独立游戏出圈</span>
+            </div>
+            <p class="desc">融合《寂静岭》与《98世界杯》的诡异独立游戏《FEAR FA 98》因将敌人头颅当足球的独特玩法在7月独立游戏推荐中引发关注。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1fr7q6DEf9" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#f1f5f9">
+          <span class="section-emoji">📰</span>
+          <span class="section-name" style="color:#334155">圈内大事</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">永劫无间</span>
+              <span class="tag">平台下架</span>
+            </div>
+            <p class="desc">《永劫无间》Epic版宣布将于2026年12月30日正式下架，届时Epic版本将不再更新。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/216533" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">AI游戏</span>
+              <span class="tag">行业讨论</span>
+            </div>
+            <p class="desc">机核发布专题讨论：当你知道你喜欢的游戏是AI做的，你会感到被冒犯吗？探讨AI在游戏创作中的角色与玩家感受。</p>
+          </div>
+          <a href="https://www.gcores.com/radios/215851" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">Steam新品节</span>
+              <span class="tag">行业观察</span>
+            </div>
+            <p class="desc">2026年6月Steam新品节DEMO数量达4227个，但质量参差不齐，引发关于游戏品质下降的行业讨论。</p>
+          </div>
+          <a href="https://keylol.com/t1042294-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#dcfce7">
+          <span class="section-emoji">📢</span>
+          <span class="section-name" style="color:#166534">平台活动</span>
+          <span class="section-count">1 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">Steam新品节</span>
+              <span class="tag">平台活动</span>
+            </div>
+            <p class="desc">2026年6月Steam新品节正在进行，提供大量游戏DEMO试玩。</p>
+          </div>
+          <a href="https://keylol.com/t1042294-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer">
+    每天 09:00 自动推送 · 由 GitHub Actions 生成 · 飞书机器人
+  </div>
+
+</div>
+</body>
+</html>
