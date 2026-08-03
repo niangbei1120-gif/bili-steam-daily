@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏圈情报日报 · 2026-08-03</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 24px 16px 48px;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* Header */
+  .header { margin-bottom: 24px; }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; flex-shrink: 0; }
+  .title { font-size: 20px; font-weight: 600; color: #0f172a; }
+  .subtitle { font-size: 13px; color: #64748b; margin-left: 18px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  .stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+  .stat-label { font-size: 12px; color: #94a3b8; margin-bottom: 4px; }
+  .stat-num { font-size: 22px; font-weight: 600; color: #0f172a; }
+
+  /* Sections */
+  .sections { display: flex; flex-direction: column; gap: 16px; }
+  .section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+  .section-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .section-emoji { font-size: 15px; }
+  .section-name { font-size: 14px; font-weight: 600; flex: 1; }
+  .section-count {
+    font-size: 11px; color: #94a3b8;
+    background: #f1f5f9; padding: 2px 8px;
+    border-radius: 20px;
+  }
+  .section-body { padding: 4px 0; }
+
+  /* Items */
+  .item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .item:last-child { border-bottom: none; }
+  .item-body { flex: 1; min-width: 0; }
+  .item-top {
+    display: flex; align-items: center; gap: 6px;
+    flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .source {
+    font-size: 11px; font-weight: 500;
+    background: #eff6ff; color: #2563eb;
+    padding: 1px 6px; border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .game { font-size: 14px; font-weight: 600; color: #0f172a; }
+  .tag {
+    font-size: 11px; color: #475569;
+    background: #f1f5f9; border: 1px solid #e2e8f0;
+    padding: 1px 7px; border-radius: 4px;
+    font-family: monospace;
+  }
+  .desc { font-size: 13px; color: #475569; line-height: 1.55; }
+  .link-arrow {
+    font-size: 16px; color: #94a3b8;
+    text-decoration: none; flex-shrink: 0;
+    margin-top: 2px; transition: color 0.15s;
+  }
+  .link-arrow:hover { color: #3b82f6; }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px; text-align: center;
+    font-size: 12px; color: #94a3b8;
+  }
+
+  @media (max-width: 480px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .title { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="dot"></div>
+      <span class="title">游戏圈情报日报</span>
+    </div>
+    <div class="subtitle">2026-08-03 · 自动抓取 B站 + 6 路 RSS · DeepSeek AI 分类</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">精选条目</div>
+      <div class="stat-num">10</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">内容板块</div>
+      <div class="stat-num">4</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">来源平台</div>
+      <div class="stat-num">7</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">推送时间</div>
+      <div class="stat-num" style="font-size:16px">09:00</div>
+    </div>
+  </div>
+
+  <div class="sections">
+    
+      <div class="section">
+        <div class="section-head" style="background:#dbeafe">
+          <span class="section-emoji">🆕</span>
+          <span class="section-name" style="color:#1e40af">新游速报</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">纵横秘湾</span>
+              <span class="tag">正式发售</span>
+            </div>
+            <p class="desc">海盗主题策略模拟游戏《纵横秘湾》现已登陆PC平台，玩家需建立海盗避风港、组建舰队并挑战王权。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV11M396dERu" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">轮回之兽</span>
+              <span class="tag">即将发售</span>
+            </div>
+            <p class="desc">GAME FREAK开发的ARPG《轮回之兽》将于2026-08-04发售，融合即时与回合制战斗，支持官方中文。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1TG3Z66Ehb" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">多少兄弟？</span>
+              <span class="tag">销量突破</span>
+            </div>
+            <p class="desc">肉鸽自走棋游戏《多少兄弟？》发售2天销量突破十万份，成为近期热门独立游戏。</p>
+          </div>
+          <a href="https://keylol.com/t1045449-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#fee2e2">
+          <span class="section-emoji">🔥</span>
+          <span class="section-name" style="color:#991b1b">热度飙升</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">Mr. President!</span>
+              <span class="tag">玩家热梗</span>
+            </div>
+            <p class="desc">独立游戏《Mr. President!》因“美国能飞”等魔性梗在玩家社群中快速传播，引发大量二创。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1fU3R67E5t" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">酒与剑之歌</span>
+              <span class="tag">主播热玩</span>
+            </div>
+            <p class="desc">主播寅子试玩《酒与剑之歌》，展示踩头战法和地形杀等沙雕玩法，引发观众热议。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV12T3964EVq" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">Hachishakusama</span>
+              <span class="tag">玩家热议</span>
+            </div>
+            <p class="desc">恐怖游戏《八尺大人》因暑假返乡主题和独特恐怖氛围在玩家中引发讨论和游玩热潮。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1SVGF62EQB" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#f1f5f9">
+          <span class="section-emoji">📰</span>
+          <span class="section-name" style="color:#334155">圈内大事</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">控制：共振</span>
+              <span class="tag">独家预告</span>
+            </div>
+            <p class="desc">Remedy公布《控制：共振》中国独家预告片及专属服装，引发国内玩家关注。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/217870" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">沉星之序</span>
+              <span class="tag">制作人访谈</span>
+            </div>
+            <p class="desc">《见证者》制作人Jonathan Blow在见面会现场分享新作《沉星之序》的设计理念，引发行业讨论。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/217866" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">古神: 风里希</span>
+              <span class="tag">制作人访谈</span>
+            </div>
+            <p class="desc">动作游戏《古神: 风里希》制作人深度对话，揭秘中式神仙打架游戏的开发幕后。</p>
+          </div>
+          <a href="https://www.gcores.com/radios/217825" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#dcfce7">
+          <span class="section-emoji">📢</span>
+          <span class="section-name" style="color:#166534">平台活动</span>
+          <span class="section-count">1 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">Steam</span>
+              <span class="tag">平台活动</span>
+            </div>
+            <p class="desc">2026 Steam Cyberpunk Fest 将于明日开启，官方宣传片已发布，包含多款赛博朋克主题游戏。</p>
+          </div>
+          <a href="https://keylol.com/t1045512-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer">
+    每天 09:00 自动推送 · 由 GitHub Actions 生成 · 飞书机器人
+  </div>
+
+</div>
+</body>
+</html>
