@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏圈情报日报 · 2026-08-26</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 24px 16px 48px;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* Header */
+  .header { margin-bottom: 24px; }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; flex-shrink: 0; }
+  .title { font-size: 20px; font-weight: 600; color: #0f172a; }
+  .subtitle { font-size: 13px; color: #64748b; margin-left: 18px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  .stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+  .stat-label { font-size: 12px; color: #94a3b8; margin-bottom: 4px; }
+  .stat-num { font-size: 22px; font-weight: 600; color: #0f172a; }
+
+  /* Sections */
+  .sections { display: flex; flex-direction: column; gap: 16px; }
+  .section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+  .section-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .section-emoji { font-size: 15px; }
+  .section-name { font-size: 14px; font-weight: 600; flex: 1; }
+  .section-count {
+    font-size: 11px; color: #94a3b8;
+    background: #f1f5f9; padding: 2px 8px;
+    border-radius: 20px;
+  }
+  .section-body { padding: 4px 0; }
+
+  /* Items */
+  .item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .item:last-child { border-bottom: none; }
+  .item-body { flex: 1; min-width: 0; }
+  .item-top {
+    display: flex; align-items: center; gap: 6px;
+    flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .source {
+    font-size: 11px; font-weight: 500;
+    background: #eff6ff; color: #2563eb;
+    padding: 1px 6px; border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .game { font-size: 14px; font-weight: 600; color: #0f172a; }
+  .tag {
+    font-size: 11px; color: #475569;
+    background: #f1f5f9; border: 1px solid #e2e8f0;
+    padding: 1px 7px; border-radius: 4px;
+    font-family: monospace;
+  }
+  .desc { font-size: 13px; color: #475569; line-height: 1.55; }
+  .link-arrow {
+    font-size: 16px; color: #94a3b8;
+    text-decoration: none; flex-shrink: 0;
+    margin-top: 2px; transition: color 0.15s;
+  }
+  .link-arrow:hover { color: #3b82f6; }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px; text-align: center;
+    font-size: 12px; color: #94a3b8;
+  }
+
+  @media (max-width: 480px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .title { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="dot"></div>
+      <span class="title">游戏圈情报日报</span>
+    </div>
+    <div class="subtitle">2026-08-26 · 自动抓取 B站 + 6 路 RSS · DeepSeek AI 分类</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">精选条目</div>
+      <div class="stat-num">10</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">内容板块</div>
+      <div class="stat-num">4</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">来源平台</div>
+      <div class="stat-num">7</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">推送时间</div>
+      <div class="stat-num" style="font-size:16px">09:00</div>
+    </div>
+  </div>
+
+  <div class="sections">
+    
+      <div class="section">
+        <div class="section-head" style="background:#dbeafe">
+          <span class="section-emoji">🆕</span>
+          <span class="section-name" style="color:#1e40af">新游速报</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">巫师3：狂猎 — 重制版</span>
+              <span class="tag">官宣预告</span>
+            </div>
+            <p class="desc">《巫师3：狂猎 — 重制版》官宣，将于9月29日上线，已拥有原版的玩家可免费升级。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1XAhL65E5h" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">昭和米国物语</span>
+              <span class="tag">实机预告</span>
+            </div>
+            <p class="desc">国产RPG《昭和米国物语》在科隆游戏展公布实机预告，游戏将登陆PS5和PC，发售日未定。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1vzhL6SEqF" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">湮灭之潮</span>
+              <span class="tag">剧情预告</span>
+            </div>
+            <p class="desc">国产骑士幻想动作游戏《湮灭之潮》公布全新剧情先导影片，游戏将以买断制登录PC与主机平台。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1HW8D69EgU" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#fee2e2">
+          <span class="section-emoji">🔥</span>
+          <span class="section-name" style="color:#991b1b">热度飙升</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">巫师3：狂猎 — 旧时曲</span>
+              <span class="tag">DLC公布</span>
+            </div>
+            <p class="desc">《巫师3：狂猎》新DLC《旧时曲》公布先导预告，预计2027年推出。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1kxhL6bENX" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">红色沙漠</span>
+              <span class="tag">版本更新</span>
+            </div>
+            <p class="desc">《红色沙漠》在科隆游戏展推出2.0增强版，新增过场动画、剧情场景及多种语言配音。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1eyhL6jE8D" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">源初之结</span>
+              <span class="tag">新作公布</span>
+            </div>
+            <p class="desc">米哈游在科隆游戏展公布全新奇幻写实动作游戏《源初之结》。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/218782" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#f1f5f9">
+          <span class="section-emoji">📰</span>
+          <span class="section-name" style="color:#334155">圈内大事</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">CDPR与暴雪</span>
+              <span class="tag">合作</span>
+            </div>
+            <p class="desc">CDPR与暴雪达成合作，《巫师3：狂猎 — 重制版》和DLC《旧时曲》将上架战网。</p>
+          </div>
+          <a href="https://keylol.com/t1047816-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">英雄无敌III</span>
+              <span class="tag">社区模组</span>
+            </div>
+            <p class="desc">《英雄无敌III》社区模组「深渊号角」现已免费推出。</p>
+          </div>
+          <a href="https://keylol.com/t1047811-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">地牢大出血</span>
+              <span class="tag">全平台发售</span>
+            </div>
+            <p class="desc">《Nidhogg》开发商Messhof的动作肉鸽新作《地牢大出血》现已全平台发售。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/218784" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#dcfce7">
+          <span class="section-emoji">📢</span>
+          <span class="section-name" style="color:#166534">平台活动</span>
+          <span class="section-count">1 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">其乐Keylol</span>
+              <span class="game">Steam</span>
+              <span class="tag">VR特卖</span>
+            </div>
+            <p class="desc">SteamVR特卖活动将于9月14日至9月21日举行。</p>
+          </div>
+          <a href="https://keylol.com/t1047821-1-1" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer">
+    每天 09:00 自动推送 · 由 GitHub Actions 生成 · 飞书机器人
+  </div>
+
+</div>
+</body>
+</html>
