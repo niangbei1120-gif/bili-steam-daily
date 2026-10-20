@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏圈情报日报 · 2026-10-20</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 24px 16px 48px;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* Header */
+  .header { margin-bottom: 24px; }
+  .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; flex-shrink: 0; }
+  .title { font-size: 20px; font-weight: 600; color: #0f172a; }
+  .subtitle { font-size: 13px; color: #64748b; margin-left: 18px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  .stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+  .stat-label { font-size: 12px; color: #94a3b8; margin-bottom: 4px; }
+  .stat-num { font-size: 22px; font-weight: 600; color: #0f172a; }
+
+  /* Sections */
+  .sections { display: flex; flex-direction: column; gap: 16px; }
+  .section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+  .section-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .section-emoji { font-size: 15px; }
+  .section-name { font-size: 14px; font-weight: 600; flex: 1; }
+  .section-count {
+    font-size: 11px; color: #94a3b8;
+    background: #f1f5f9; padding: 2px 8px;
+    border-radius: 20px;
+  }
+  .section-body { padding: 4px 0; }
+
+  /* Items */
+  .item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .item:last-child { border-bottom: none; }
+  .item-body { flex: 1; min-width: 0; }
+  .item-top {
+    display: flex; align-items: center; gap: 6px;
+    flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .source {
+    font-size: 11px; font-weight: 500;
+    background: #eff6ff; color: #2563eb;
+    padding: 1px 6px; border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .game { font-size: 14px; font-weight: 600; color: #0f172a; }
+  .tag {
+    font-size: 11px; color: #475569;
+    background: #f1f5f9; border: 1px solid #e2e8f0;
+    padding: 1px 7px; border-radius: 4px;
+    font-family: monospace;
+  }
+  .desc { font-size: 13px; color: #475569; line-height: 1.55; }
+  .link-arrow {
+    font-size: 16px; color: #94a3b8;
+    text-decoration: none; flex-shrink: 0;
+    margin-top: 2px; transition: color 0.15s;
+  }
+  .link-arrow:hover { color: #3b82f6; }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px; text-align: center;
+    font-size: 12px; color: #94a3b8;
+  }
+
+  @media (max-width: 480px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .title { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="dot"></div>
+      <span class="title">游戏圈情报日报</span>
+    </div>
+    <div class="subtitle">2026-10-20 · 自动抓取 B站 + 6 路 RSS · DeepSeek AI 分类</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">精选条目</div>
+      <div class="stat-num">8</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">内容板块</div>
+      <div class="stat-num">4</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">来源平台</div>
+      <div class="stat-num">7</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">推送时间</div>
+      <div class="stat-num" style="font-size:16px">09:00</div>
+    </div>
+  </div>
+
+  <div class="sections">
+    
+      <div class="section">
+        <div class="section-head" style="background:#dbeafe">
+          <span class="section-emoji">🆕</span>
+          <span class="section-name" style="color:#1e40af">新游速报</span>
+          <span class="section-count">3 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">异界揭踪</span>
+              <span class="tag">愿望单破10万</span>
+            </div>
+            <p class="desc">Furyu宣布TPS新作《异界揭踪》Steam愿望单数突破10万，同社《恸哭幽光》愿望单突破7.77万。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1zfnF6sEqa" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">Reshine</span>
+              <span class="tag">定档11月26日</span>
+            </div>
+            <p class="desc">独立工作室Quite OK Games宣布《Reshine》将于11月26日发售，Steam Demo现已上线。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/221006" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">异于天堂</span>
+              <span class="tag">剧情预告公开</span>
+            </div>
+            <p class="desc">世嘉公开《异于天堂》系列剧情预告片第一部“小仓篇”，本作将于2027年1月15日发售。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/221143" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#fee2e2">
+          <span class="section-emoji">🔥</span>
+          <span class="section-name" style="color:#991b1b">热度飙升</span>
+          <span class="section-count">2 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">蝼蚁之城</span>
+              <span class="tag">新品节Demo上线</span>
+            </div>
+            <p class="desc">凉屋出品单机新作《蝼蚁之城》发布Steam新品节特别预告，Demo已上线，赛博神话背景动作玩法引发关注。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1rgJZ6nEe5" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">SLAM TANK</span>
+              <span class="tag">坦克动作试玩</span>
+            </div>
+            <p class="desc">主打炮管弹反与车身冲撞的坦克动作游戏《SLAM TANK》试玩内容在B站传播，被玩家称为“坦克无双割草”。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1L8nF6LEd7" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#f1f5f9">
+          <span class="section-emoji">📰</span>
+          <span class="section-name" style="color:#334155">圈内大事</span>
+          <span class="section-count">2 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">双点博物馆</span>
+              <span class="tag">联动发布</span>
+            </div>
+            <p class="desc">世嘉宣布《双点博物馆》与《小猫咪大城市》联动内容现已发布。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/221141" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">机核</span>
+              <span class="game">足球经理27</span>
+              <span class="tag">功能详解公开</span>
+            </div>
+            <p class="desc">世嘉公开《足球经理27》功能详解博客，介绍更具个性与包容性的专属体验。</p>
+          </div>
+          <a href="https://www.gcores.com/articles/221142" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head" style="background:#dcfce7">
+          <span class="section-emoji">📢</span>
+          <span class="section-name" style="color:#166534">平台活动</span>
+          <span class="section-count">1 条</span>
+        </div>
+        <div class="section-body">
+        <div class="item">
+          <div class="item-body">
+            <div class="item-top">
+              <span class="source">B站</span>
+              <span class="game">Steam新品节</span>
+              <span class="tag">10月新品节开启</span>
+            </div>
+            <p class="desc">2026年10月Steam新品节现已开启，持续至10月27日凌晨，大量游戏开放试玩，涵盖平台动作、模拟经营、Roguelike等类型。</p>
+          </div>
+          <a href="https://www.bilibili.com/video/BV1oWnF6EEg3" target="_blank" rel="noopener" class="link-arrow">↗</a>
+        </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer">
+    每天 09:00 自动推送 · 由 GitHub Actions 生成 · 飞书机器人
+  </div>
+
+</div>
+</body>
+</html>
